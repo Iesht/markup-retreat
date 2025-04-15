@@ -1,1 +1,29 @@
-/* Пиши стили тут */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.star {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.star input[type="radio"] {
+    display: none;
+}
+
+.star label {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    background-image: url('img/star-empty.svg');
+    background-size: auto;
+    display: inline-block;
+}
+
+.star label:hover,
+.star label:hover ~ label {
+    background-image: url('img/star.svg');
+}
